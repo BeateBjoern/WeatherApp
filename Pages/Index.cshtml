@@ -58,8 +58,12 @@
                     // Get the hour from the timeSeries.time
                     var hourFromTimeSeries = timeSeries.time.Hour;
 
+                    var currentDate = DateTime.UtcNow.Date; // Get the date from the timeSeries.time
+
+                    var dateFromTimeSeries = timeSeries.time.Date; // Get the date from the timeSeries.time
+
                     // Check if the hour matches the current hour
-                <tr class="@(hourFromTimeSeries == currentHour ? "highlight" : "")">
+                <tr class="@(hourFromTimeSeries == currentHour && dateFromTimeSeries ==currentDate ? "highlight" : "")">
                     <td>@timeSeries.time.ToLocalTime()</td>
                     <td>@timeSeries.data.instant.details.air_temperature</td>
                     <td>@timeSeries.data.next_1_hours?.details.precipitation_amount</td>

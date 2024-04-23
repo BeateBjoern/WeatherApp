@@ -36,5 +36,8 @@ public class IndexModel : PageModel
     {
         // Retrieve weather data from the weather service
         WeatherData = await _weatherService.GetWeatherDataAsync(56.15181, 10.10147);
+
+       
+        
     }
 }

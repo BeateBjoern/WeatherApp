@@ -46,8 +46,8 @@ public class Program
             WeatherService weatherService = new WeatherService(httpClient);
 
             // Specify the latitude and longitude
-            double latitude = 40.7128; // Example latitude (New York City)
-            double longitude = -74.0060; // Example longitude (New York City)
+            double latitude = 56.15181; // Example latitude Brabrand 
+            double longitude = 10.10147; // Example longitude Brabrand
 
             try
             {
@@ -89,7 +89,7 @@ public class Program
 
                     if (next6HourDetails != null)
                     {
-                        Console.WriteLine($"Precipitation Amount (Next 6 Hours): {next6HourDetails.precipitation_amount}"); 
+                        Console.WriteLine($"Temperature(Next 6 Hours): {next6HourDetails.air_temperature}"); 
                     }
                 }
 
